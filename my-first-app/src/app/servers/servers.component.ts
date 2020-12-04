@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./servers.component.scss']
 })
 export class ServersComponent {
+  allowServer = false;
+  serverCreationStatus = 'No server was created!';
 
+  // tslint:disable-next-line:typedef
+  onCreateServer() {
+    this.serverCreationStatus = 'Server was created!';
+  }
 }
