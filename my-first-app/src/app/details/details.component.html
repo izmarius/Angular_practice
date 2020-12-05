@@ -1,0 +1,9 @@
+<div class="container">
+  <button class="btn btn-primary" (click)="onDisplayDetails()">Display Details</button>
+</div>
+<div class="container" >
+  <p [ngStyle]="{display: getDisplayDetails()}">Secret password: forsaken</p>
+</div>
+<div class="container">
+  <p *ngFor="let timestamp of timestamps; let i = index" [ngStyle]="{backgroundColor: setConditionalColor(i, 'blue')}" [ngClass]="{walterWhite: i > 3}"> {{ timestamp }}</p>
+</div>
