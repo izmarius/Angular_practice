@@ -9,9 +9,13 @@ export class ServersComponent {
   allowServer = false;
   serverCreationStatus = 'No server was created!';
   serverName = 'Server has no name';
+  serverCreated = false;
+  servers = ['server1', 'server2'];
 
   // tslint:disable-next-line:typedef
   onCreateServer() {
+    this.serverCreated = true;
+    this.servers.push(this.serverName);
     this.serverCreationStatus = 'Server was created!';
   }
 
