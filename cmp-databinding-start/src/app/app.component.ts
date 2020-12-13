@@ -7,6 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   serverElements = [{type: 'server', name: 'test server', content: 'empty'}];
+  oddNumbers: number[] = [];
+  evenNumbers: number[] = [];
 
   onServerAdded(serverData: {serverName: string, serverContent: string}) {
     this.serverElements.push({
@@ -22,5 +24,9 @@ export class AppComponent {
       name: blueprintData.serverName,
       content: blueprintData.serverContent
     });
+  }
+
+  onGameStarted(gameCounter: number) {
+    gameCounter % 2 !== 0 ? this.oddNumbers.push(gameCounter) : this.evenNumbers.push(gameCounter);
   }
 }
