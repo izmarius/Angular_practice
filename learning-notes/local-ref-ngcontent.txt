@@ -1,0 +1,5 @@
+- using local references in templates #localRef
+- fetching local references with @ViewChild
+
+- ng-content for redering content inside your 
+  custom component selector
