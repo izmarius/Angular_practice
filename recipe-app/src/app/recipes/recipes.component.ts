@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Recipe } from './recipe.model';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-recipes',
@@ -6,5 +7,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./recipes.component.scss']
 })
 export class RecipesComponent {
+  selectedRecipe: Recipe;
 
+  // tslint:disable-next-line:typedef
+  setSelectedRecipe(recipe: Recipe) {
+    this.selectedRecipe = recipe;
+  }
 }
