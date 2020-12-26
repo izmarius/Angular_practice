@@ -1,3 +1,4 @@
+import { RecipeService } from './../../recipe.service';
 import { Recipe } from './../../recipe.model';
 import { Component, Input } from '@angular/core';
 
@@ -8,4 +9,11 @@ import { Component, Input } from '@angular/core';
 })
 export class RecipeItemComponent  {
   @Input() recipeItem: Recipe;
+
+  constructor(private recipeService: RecipeService) {}
+
+  // tslint:disable-next-line:typedef
+  onSelectedRecipeItem() {
+    this.recipeService.recipeSelected.emit(this.recipeItem);
+  }
 }
